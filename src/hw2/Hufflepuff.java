@@ -26,4 +26,23 @@ public class Hufflepuff extends Hogwarts{
                 ", верность: " + loyalty +
                 ", честность" + honesty;
     }
+
+    protected int getAbilitiesSum() {
+        return hardworking + loyalty + honesty;
+    }
+
+    //Метод выясняющий какой из двух учеников Пуффендуя лучший
+    public void bestInHufflepuff(Hufflepuff hufflepuff) {
+        int scoreStudent_1 = getAbilitiesSum();
+        int scoreStudent_2 = hufflepuff.getAbilitiesSum();
+
+        if (scoreStudent_1 > scoreStudent_2) {
+            System.out.println("Ученик 1 лучше ученика 2");
+        }
+        else if (scoreStudent_1 < scoreStudent_2) {
+            System.out.println("Ученик 2 лучше ученика 1");
+        }
+        else { System.out.println("Ученики равны");
+        }
+    }
 }

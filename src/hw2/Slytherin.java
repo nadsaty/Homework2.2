@@ -27,4 +27,23 @@ public class Slytherin extends Hogwarts{
                 ", решительность" + determination +
                 ", амбициозность" + ambition;
     }
+
+    protected int getAbilitiesSum() {
+        return cunning + determination + ambition;
+    }
+
+    //Метод выясняющий какой из двух учеников Слизерина лучший
+    public void bestInSlytherin(Slytherin slytherin) {
+        int scoreStudent_1 = getAbilitiesSum();
+        int scoreStudent_2 = slytherin.getAbilitiesSum();
+
+        if (scoreStudent_1 > scoreStudent_2) {
+            System.out.println("Ученик 1 лучше ученика 2");
+        }
+        else if (scoreStudent_1 < scoreStudent_2) {
+            System.out.println("Ученик 2 лучше ученика 1");
+        }
+        else { System.out.println("Ученики равны");
+        }
+    }
 }
